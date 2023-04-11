@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdsMobProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-bH-nSG">
+                                <rect key="frame" x="76.666666666666671" y="333" width="241.33333333333331" height="186.3333333333334"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="I6o-K5-kKz"/>
+                                    <constraint firstAttribute="height" constant="189" id="X7H-km-0qI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzY-bb-MAr" customClass="GADBannerView">
+                                <rect key="frame" x="36.666666666666657" y="776" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="7XT-Zk-LOR"/>
+                                    <constraint firstAttribute="height" constant="50" id="wLa-sQ-pcO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVz-Pw-qhM">
+                                <rect key="frame" x="281" y="114" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btnChk2Ad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBN-fR-Wzd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="ZzY-bb-MAr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOK-9Y-k9J"/>
+                            <constraint firstItem="oVz-Pw-qhM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="RNf-Rj-AuS"/>
+                            <constraint firstItem="ZzY-bb-MAr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="8" id="fY9-rN-f5E"/>
+                            <constraint firstItem="Yg5-bH-nSG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGq-m8-RGk"/>
+                            <constraint firstItem="oVz-Pw-qhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="281" id="tun-9O-s8h"/>
+                            <constraint firstItem="Yg5-bH-nSG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vJg-GF-qIQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zr9-SS-78T"/>
+                    <connections>
+                        <outlet property="bannerView" destination="ZzY-bb-MAr" id="T3t-jX-x8n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.44274809160299" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder.fill.badge.plus" catalog="system" width="128" height="92"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
